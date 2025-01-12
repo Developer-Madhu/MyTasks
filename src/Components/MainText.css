@@ -1,0 +1,25 @@
+.maintext{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins';
+    justify-content: center;
+    height: 450px;
+    font-size: 2.5vw;
+}
+.maintext p{
+    opacity: 0.3;
+    font-size: 25px;
+}
+@media only screen and (max-width:1024px){
+    .maintext{
+        height: 250px;
+    }
+    .maintext h2{
+        font-size: 6.5vw;
+    }
+    .maintext p{
+        font-size: 15px;
+    }
+}
