@@ -1,0 +1,26 @@
+.tasks{
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    overflow-x: scroll;
+    gap: 10px;
+}
+.container{
+    border-radius: 12px;
+    flex: 1 0 15em;
+    font-family: 'Open Sans';
+    text-overflow: ellipsis;
+    padding: 15px;
+    background-color: lightgreen;
+    height: 90%;
+    /* display: none; */
+    width: 15em;
+}
+#hash{
+    opacity: 0.3;
+    color: black;
+}

@@ -14,6 +14,7 @@ const Search = () => {
         <div className="desc">
             <textarea draggable="false" placeholder='Add description' name="textarea" id="textbox"></textarea>
         </div>
+        <br />
     </div>
   )
 }
