@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './Components/Navbar'
 import MainText from './Components/MainText'
 import Search from './Components/Search'
-import Tasks from './Components/Tasks'
+import Footer from './Components/Footer'
 
 const Home = () => {
   return (
@@ -10,6 +10,7 @@ const Home = () => {
         <Navbar />
         <MainText />
         <Search />
+        <Footer />
     </div>
   )
 }

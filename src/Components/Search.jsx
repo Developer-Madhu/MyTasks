@@ -21,10 +21,10 @@ const Search = () => {
   };
 
   const handleClick = () => {
-    let task = inputVal.trim()
+    let taskTitle = inputVal.trim()
     let desc = textareaVal.trim()
     const singleTask = {
-      title: task,
+      title: taskTitle,
       info: desc
     }
     const updatedTasks = [...allTasks, singleTask];

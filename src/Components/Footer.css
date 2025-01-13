@@ -1,0 +1,9 @@
+.footer{
+    background-color: black;
+    height: 5em;
+    display: flex;
+    font-family: 'Open Sans';
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
