@@ -11,14 +11,15 @@
 }
 .container{
     border-radius: 12px;
-    flex: 1 0 15em;
+    flex: 0 0 15em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     font-family: 'Open Sans';
     text-overflow: ellipsis;
+    scroll-behavior: smooth;
     padding: 15px;
     background-color: lightgreen;
     height: 90%;
     /* display: none; */
-    width: 15em;
 }
 #hash{
     opacity: 0.3;

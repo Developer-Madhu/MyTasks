@@ -1,20 +1,52 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { PlusCircle } from 'phosphor-react'
 import './Search.css'
+import Tasks from './Tasks'
 
 const Search = () => {
+
+  const [inputVal, setInputVal] = useState('')
+  const [textareaVal, setTextVal] = useState('')
+  const [allTasks, setAlltasks] = useState(() => {
+    const savedTasks = localStorage.getItem('tasks');
+    return savedTasks ? JSON.parse(savedTasks) : [];
+  });
+
+
+  const handleInputChange = (event) => {
+    setInputVal(event.target.value);
+  };
+  const handleTextChange = (event) => {
+    setTextVal(event.target.value);
+  };
+
+  const handleClick = () => {
+    let task = inputVal.trim()
+    let desc = textareaVal.trim()
+    const singleTask = {
+      title: task,
+      info: desc
+    }
+    const updatedTasks = [...allTasks, singleTask];
+    setAlltasks(updatedTasks)
+    localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+    setInputVal('');
+    setTextVal('');
+  }
+
   return (
     <div className='search'>
-        <div className="searchbox">
-            <input type="text" placeholder='Add a task' />
-            <br />
-            <button className="add"><PlusCircle size={32} /></button>
-        </div>
+      <div className="searchbox">
+        <input type="text" value={inputVal} onChange={handleInputChange} placeholder='Add a task' />
         <br />
-        <div className="desc">
-            <textarea draggable="false" placeholder='Add description' name="textarea" id="textbox"></textarea>
-        </div>
-        <br />
+        <button onClick={handleClick} className="add"><PlusCircle size={32} /></button>
+      </div>
+      <br />
+      <div className="desc">
+        <textarea draggable="false" value={textareaVal} onChange={handleTextChange} placeholder='Add description' name="textarea" id="textbox"></textarea>
+      </div>
+      <br />
+      <Tasks taskVals={allTasks} />
     </div>
   )
 }

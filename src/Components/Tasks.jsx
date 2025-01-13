@@ -1,30 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Tasks.css'
 
-const Tasks = () => {
+const Tasks = ({ taskVals }) => {
+
   return (
     <div className='tasks'>
-        <div className="container">
-            <p id='hash'>TASK</p>
-            <br />
-            <h2>Task name</h2>
-            <br />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste atque quos omnis.  </p>
-        </div>
-        <div className="container">
-            <p id='hash'>TASK</p>
-            <br />
-            <h2>Task name</h2>
-            <br />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste atque quos omnis.  </p>
-        </div>
-        <div className="container">
-            <p id='hash'>TASK</p>
-            <br />
-            <h2>Task name</h2>
-            <br />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste atque quos omnis.  </p>
-        </div>
+        {taskVals.length > 0 ? (
+          taskVals.map((task, index) => (
+            <div key={index} className="container">
+              <p id='hash'>TASK</p>
+              <h2>{task.title}</h2>
+              <br />
+              <p>{task.info}</p>
+            </div>
+          ))
+        ) : (
+          <p>No tasks available. Add a task to get started!</p>
+        )}
     </div>
   )
 }

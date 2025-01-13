@@ -10,7 +10,6 @@ const Home = () => {
         <Navbar />
         <MainText />
         <Search />
-        <Tasks />
     </div>
   )
 }
