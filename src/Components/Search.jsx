@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { PlusCircle } from 'phosphor-react'
 import './Search.css'
 import Tasks from './Tasks'
+import MyCalendar from './MyCalendar'
 
 const Search = () => {
 
@@ -25,7 +26,8 @@ const Search = () => {
     let desc = textareaVal.trim()
     const singleTask = {
       title: taskTitle,
-      info: desc
+      info: desc,
+      timeAdded: Date.now()
     }
     const updatedTasks = [...allTasks, singleTask];
     setAlltasks(updatedTasks)
@@ -45,6 +47,8 @@ const Search = () => {
       <div className="desc">
         <textarea draggable="false" value={textareaVal} onChange={handleTextChange} placeholder='Add description' name="textarea" id="textbox"></textarea>
       </div>
+      <br />
+      <MyCalendar />
       <br />
       <Tasks taskVals={allTasks} />
     </div>

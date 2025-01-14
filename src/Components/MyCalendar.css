@@ -1,0 +1,111 @@
+/* Calendar container styling */
+.calendar-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+  }
+  
+  /* Title styling */
+  .calendar-container h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Calendar general styling */
+  .custom-calendar {
+    border: none;
+    width: 100%;
+  }
+  
+  .custom-calendar button {
+    background: #f5f7f9;
+    border: 1px solid #e6e8ec;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  /* Hover effects */
+  .custom-calendar button:hover {
+    background: #0073e6;
+    color: #fff;
+    transform: scale(1.05);
+  }
+  
+  /* Highlight today */
+  .custom-calendar .react-calendar__tile--now {
+    background: #eaf3ff;
+    color: #0073e6;
+    border: 1px solid #0073e6;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+  
+  /* Highlight selected date */
+  .custom-calendar .react-calendar__tile--active {
+    background: #0073e6 !important;
+    color: #fff !important;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+  
+  /* Weekdays header */
+  .custom-calendar .react-calendar__month-view__weekdays {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 10px;
+  }
+  
+  /* Navigation buttons (previous/next) */
+  .custom-calendar .react-calendar__navigation button {
+    background: #f5f7f9;
+    border: 1px solid #e6e8ec;
+    color: #333;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 16px;
+    transition: all 0.2s ease;
+  }
+  
+  .custom-calendar .react-calendar__navigation button:hover {
+    background: #0073e6;
+    color: #fff;
+    transform: scale(1.1);
+  }
+  
+  /* Month/Year selection */
+  .custom-calendar .react-calendar__navigation__label {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  /* Tile (date button) spacing */
+  .custom-calendar .react-calendar__tile {
+    padding: 15px 10px;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .calendar-container {
+      padding: 20px;
+    }
+    .custom-calendar button {
+      font-size: 12px;
+    }
+    .custom-calendar .react-calendar__tile {
+      padding: 10px 5px;
+    }
+  }
