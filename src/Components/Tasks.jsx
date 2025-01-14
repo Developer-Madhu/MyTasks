@@ -7,16 +7,23 @@ const Tasks = ({ taskVals }) => {
   const handleSingleClick = (index) => {
     const updatedTasks = tasks.map((task, i) =>
       i === index
-        ? { ...task, isStriked: !task.isStriked } // Toggle `isStriked` property
+        ? { ...task, isStriked: !task.isStriked } 
         : task
     );
     setTasks(updatedTasks);
   };
 
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+  
+    const formattedTime = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`;
+  
   const handleDoubleClick = (index) => {
-    const updatedTasks = tasks.filter((_, i) => i !== index); // Remove the task
+    const updatedTasks = tasks.filter((_, i) => i !== index); 
     setTasks(updatedTasks);
-    localStorage.setItem('tasks', JSON.stringify(updatedTasks)); // Update localStorage
+    localStorage.setItem('tasks', JSON.stringify(updatedTasks)); 
   };
 
   return (
@@ -29,6 +36,8 @@ const Tasks = ({ taskVals }) => {
             <h2>{task.title}</h2>
             <br />
             <p>{task.info}</p>
+            <br /><br />
+            <p id='time'>{formattedTime}</p>
           </div>
         ))
       ) : (

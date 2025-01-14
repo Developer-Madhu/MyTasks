@@ -1,9 +1,12 @@
 .footer{
-    background-color: black;
+    background-color: white;
     height: 5em;
     display: flex;
+    padding: 15px;
+    gap: 10px;
+    font-weight:500;
     font-family: 'Open Sans';
-    justify-content: center;
+    justify-content:flex-start;
     align-items: center;
-    color: white;
+    color: black;
 }

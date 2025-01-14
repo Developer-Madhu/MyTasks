@@ -17,11 +17,18 @@
     text-overflow: ellipsis;
     scroll-behavior: smooth;
     padding: 15px;
-    background-color: lightgreen;
+    /* background-color:rgba(218, 165, 32, 0.756); */
+    background-color: #53f5b4;
     height: 90%;
     /* display: none; */
+}
+.tasks::-webkit-scrollbar{
+    display: none;
 }
 #hash{
     opacity: 0.3;
     color: black;
+}
+#time{
+    opacity: 0.3;
 }

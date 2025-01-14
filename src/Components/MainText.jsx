@@ -5,7 +5,7 @@ const MainText = () => {
   return (
     <div className='maintext'>
         <h2>Plan your day,</h2>
-        <h2>Increase your Prductivity</h2>
+        <h2>Increase your Productivity</h2>
         <h2>with tiny steps everyday.</h2>
         <br />
         <p>Plan, Perform & Succeed</p>

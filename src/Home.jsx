@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar'
 import MainText from './Components/MainText'
 import Search from './Components/Search'
 import Footer from './Components/Footer'
+import Analytics from './Components/Analytics'
 
 const Home = () => {
   return (
@@ -10,6 +11,9 @@ const Home = () => {
         <Navbar />
         <MainText />
         <Search />
+        <br />
+        <Analytics />
+        <br />
         <Footer />
     </div>
   )
