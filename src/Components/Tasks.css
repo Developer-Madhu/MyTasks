@@ -32,3 +32,65 @@
 #time{
     opacity: 0.3;
 }
+
+/* this is the css of new calendar */
+.tasks-container {
+    margin-top: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tasks-row {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .task-card {
+    min-width: 250px;
+    background-color: lightgreen;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .task-card h3 {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .task-card p {
+    margin: 5px 0;
+    color: #666;
+    font-family: 'Open Sans';
+  }
+  
+  .task-card .task-date {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .task-card button {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .task-card button:hover {
+    background-color: #cc0000;
+  }
+  
+  .no-tasks {
+    text-align: center;
+    color: #888;
+  }
+  

@@ -1,4 +1,4 @@
-.search{
+/* .search{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -53,4 +53,73 @@
     .desc{
         width: 70%;
     }
-}
+} */
+
+.task-manager {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task-manager h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .task-manager input,
+  .task-manager textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  .task-manager textarea {
+    height: 80px;
+    resize: none;
+  }
+  
+  .task-manager button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .task-manager button:hover {
+    background-color: #0056b3;
+  }
+  
+  .custom-calendar {
+    width: 100%;
+    margin: 20px 0;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .react-calendar__navigation{
+    height: 60px;
+    gap: 10px;
+  }
+  .react-calendar__month-view__days{
+    gap: 15px;
+    justify-content: center;
+  }
